@@ -22,7 +22,7 @@ module.exports.signUp = async (req, res)=>{
         res.status(200).json({newUser:newUser._id});
     }catch(err){
         const errors = signUpErrors(err);
-        res.status(200).send({errors});
+        res.status(201).send({errors});
     }
 }
 

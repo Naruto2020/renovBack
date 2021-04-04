@@ -1,5 +1,5 @@
 // initialisation du server et des variables d'environnement 
-/*const express = require("express");
+const express = require("express");
 const path = require('path');
 const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
@@ -45,12 +45,6 @@ app.get("/jwtid", requireAuth, (req, res) =>{ // on récuppère les infos de l'u
 app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
 app.use("/api/jardinTerrasse", jardinTRoutes);
-app.use("/api/salleBainSolCar", salleBainSolCarRoutes);*/
+app.use("/api/salleBainSolCar", salleBainSolCarRoutes);
 
-// import modules 
-const app = require("./app");
-
-// server
-app.listen(process.env.PORT, ()=>{
-    console.log(`ecoute sur le port ${process.env.PORT}`);
-});
+module.exports = app;
