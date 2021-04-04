@@ -4,6 +4,7 @@ const app = require("../app");
 const {User} = require("../models/user");
 // test singUp user
 describe("Post /user", ()=>{
+    // cancel user account test before create another one 
     beforeEach( async()=>{
         
         await User.findOneAndDelete(
